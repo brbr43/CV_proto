@@ -875,6 +875,27 @@ body:hover .cursor-glow {
   margin-bottom: 20px;
 }
 
+.edu-card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.edu-card--link:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.cert-view-all {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
 .cert-list {
   display: flex;
   flex-direction: column;
@@ -890,18 +911,10 @@ body:hover .cursor-glow {
   background: rgba(84, 197, 248, 0.05);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  cursor: pointer;
   text-align: left;
   color: inherit;
   font-family: inherit;
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.cert-item:hover {
-  border-color: var(--border-hover);
-  background: rgba(84, 197, 248, 0.12);
-  transform: translateX(4px);
+  pointer-events: none;
 }
 
 .cert-item-icon {

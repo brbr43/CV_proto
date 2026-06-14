@@ -25,10 +25,10 @@
 
   <header class="header scrolled" id="header">
     <nav class="nav container">
-      <a href="index.html" class="nav-logo">
+      <a href="index.html" data-page="home" class="nav-logo">
         <span class="logo-bracket">&lt;</span>IA<span class="logo-bracket">/&gt;</span>
       </a>
-      <a href="index.html#education" class="btn btn-outline cert-back-btn">← Back to Portfolio</a>
+      <a href="index.html#education" data-page="home" class="btn btn-outline cert-back-btn">← Back to Portfolio</a>
     </nav>
   </header>
 
@@ -84,17 +84,24 @@
   <footer class="footer">
     <div class="container footer-content">
       <p>&copy; 2026 Ibrahem Al Hussien. Built with passion & Flutter expertise.</p>
-      <a href="index.html" class="back-to-top" aria-label="Back to portfolio">
+      <a href="index.html" data-page="home" class="back-to-top" aria-label="Back to portfolio">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
       </a>
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
   <script>
-    if (location.hash) {
-      const target = document.querySelector(location.hash);
-      if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+      var root = (location.hostname === 'brbr43.github.io' || /\/CV_proto(\/|$)/.test(location.pathname)) ? '/CV_proto/' : '';
+      document.querySelectorAll('[data-page="home"]').forEach(function (el) {
+        el.href = root + 'index.html' + (el.getAttribute('href').includes('#') ? '#education' : '');
+      });
+      if (location.hash) {
+        var target = document.querySelector(location.hash);
+        if (target) setTimeout(function () { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+      }
+    });
   </script>
 </body>
 </html>

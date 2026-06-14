@@ -294,7 +294,25 @@ function initLangBars() {
   document.querySelectorAll('.edu-card').forEach(card => observer.observe(card));
 }
 
+function getSiteRoot() {
+  if (location.hostname === 'brbr43.github.io' || /\/CV_proto(\/|$)/.test(location.pathname)) {
+    return '/CV_proto/';
+  }
+  return '';
+}
+
+function fixSiteLinks() {
+  const root = getSiteRoot();
+  document.querySelectorAll('[data-page="certificates"]').forEach(el => {
+    el.href = root + 'certificates.html';
+  });
+  document.querySelectorAll('[data-page="home"]').forEach(el => {
+    el.href = root + 'index.html';
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  fixSiteLinks();
   renderProjects();
   initModal();
   initNav();
