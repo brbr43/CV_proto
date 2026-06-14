@@ -871,6 +871,97 @@ body:hover .cursor-glow {
   color: var(--accent);
 }
 
+.edu-card--certs .certs-subtitle {
+  margin-bottom: 20px;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(84, 197, 248, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.cert-item:hover {
+  border-color: var(--border-hover);
+  background: rgba(84, 197, 248, 0.12);
+  transform: translateX(4px);
+}
+
+.cert-item-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.cert-item-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cert-item-text strong {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.cert-item-text small {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.cert-item-arrow {
+  font-size: 1.25rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.modal--cert .modal-content--cert {
+  max-width: 720px;
+}
+
+.cert-modal-image-wrap {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.cert-modal-image-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.cert-modal-info h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.cert-modal-info p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
 .lang-list {
   margin-top: 16px;
 }

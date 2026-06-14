@@ -339,10 +339,28 @@
               </div>
             </div>
           </div>
-          <div class="edu-card reveal">
+          <div class="edu-card edu-card--certs reveal">
             <div class="edu-icon">🏅</div>
             <h3>Certifications</h3>
-            <p>Volunteer & Humanitarian Work Certificates</p>
+            <p class="certs-subtitle">Volunteer & Humanitarian Work — click to view</p>
+            <div class="cert-list">
+              <button type="button" class="cert-item" data-cert="amrha-team">
+                <span class="cert-item-icon">🤝</span>
+                <span class="cert-item-text">
+                  <strong>Omraha Volunteer Team</strong>
+                  <small>Earthquake relief leadership — Syria 2023</small>
+                </span>
+                <span class="cert-item-arrow">&#8250;</span>
+              </button>
+              <button type="button" class="cert-item" data-cert="ministry-of-culture">
+                <span class="cert-item-icon">📚</span>
+                <span class="cert-item-text">
+                  <strong>Ministry of Culture</strong>
+                  <small>Syria Book Fair — largest exhibition organization</small>
+                </span>
+                <span class="cert-item-arrow">&#8250;</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -427,6 +445,21 @@
         <div class="gallery-counter" id="galleryCounter"></div>
       </div>
       <div class="modal-info" id="modalInfo"></div>
+    </div>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div class="modal modal--cert" id="certModal" aria-hidden="true" role="dialog" aria-labelledby="certModalTitle">
+    <div class="modal-backdrop" data-cert-close></div>
+    <div class="modal-content modal-content--cert">
+      <button class="modal-close" data-cert-close aria-label="Close">&times;</button>
+      <div class="cert-modal-image-wrap">
+        <img src="" alt="" id="certModalImage" />
+      </div>
+      <div class="modal-info cert-modal-info">
+        <h3 id="certModalTitle"></h3>
+        <p id="certModalDesc"></p>
+      </div>
     </div>
   </div>
 
