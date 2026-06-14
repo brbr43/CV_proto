@@ -9,9 +9,9 @@ desktop.ini
 *.swp
 *.swo
 
-# Original screenshot folders (organized copies are in assets/)
-Ayn_Alfahd/
-Kidzi/
-Your Coach/
-Elite/
-Fitnees Kitchen/
+# Original screenshot folders at repo root (organized copies are in assets/)
+/Ayn_Alfahd/
+/Kidzi/
+/Your Coach/
+/Elite/
+/Fitnees Kitchen/
