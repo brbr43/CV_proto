@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      if (location.hostname === 'brbr43.github.io' || /\/CV_proto(\/|$)/.test(location.pathname)) {
+        var base = document.createElement('base');
+        base.href = '/CV_proto/';
+        document.head.appendChild(base);
+      }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Volunteer & humanitarian work certificates — Ibrahem Al Hussien" />
+  <title>Certificates | Ibrahem Al Hussien</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏅</text></svg>" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="header scrolled" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>IA<span class="logo-bracket">/&gt;</span>
+      </a>
+      <a href="index.html#education" class="btn btn-outline cert-back-btn">← Back to Portfolio</a>
+    </nav>
+  </header>
+
+  <main class="cert-page">
+    <div class="container">
+      <div class="cert-page-header reveal visible">
+        <span class="section-tag">// certificates</span>
+        <h1 class="section-title">Volunteer & Humanitarian Certificates</h1>
+        <p class="section-desc">Recognition for community service and cultural event organization in Syria</p>
+      </div>
+
+      <article class="cert-page-card reveal visible" id="amrha-team">
+        <div class="cert-page-badge">🤝 Humanitarian Work</div>
+        <h2>Omraha Volunteer Team — فريق عمرها التطوعي</h2>
+        <div class="cert-page-image">
+          <img src="assets/certificates/amrha-team.jpg" alt="Omraha Volunteer Team certificate" loading="lazy" />
+        </div>
+        <div class="cert-page-desc">
+          <p>
+            Certificate from <strong>Omraha Volunteer Team</strong> (فريق عمرها التطوعي), a community volunteer
+            organization, recognizing humanitarian work during the <strong>2023 earthquake</strong> in Syria.
+          </p>
+          <p>
+            Served as an effective <strong>team leader</strong>, coordinating relief efforts and remaining on the
+            ground for <strong>days assisting affected communities</strong> — helping displaced families and supporting
+            ongoing aid operations.
+          </p>
+        </div>
+      </article>
+
+      <article class="cert-page-card reveal visible" id="ministry-of-culture">
+        <div class="cert-page-badge">📚 Cultural Organization</div>
+        <h2>Ministry of Culture — Syria Book Fair</h2>
+        <div class="cert-page-image">
+          <img src="assets/certificates/ministry-of-culture.jpg" alt="Ministry of Culture certificate" loading="lazy" />
+        </div>
+        <div class="cert-page-desc">
+          <p>
+            Certificate from the <strong>Ministry of Culture</strong> for participating in organizing
+            <strong>Syria's largest book exhibition</strong> (معرض الكتاب) — the most significant cultural book fair
+            in the country.
+          </p>
+          <p>
+            Contributed to the <strong>planning and coordination</strong> of the event, helping deliver a major
+            cultural experience for thousands of visitors and supporting the promotion of reading and knowledge
+            across Syria.
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Ibrahem Al Hussien. Built with passion & Flutter expertise.</p>
+      <a href="index.html" class="back-to-top" aria-label="Back to portfolio">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+  </script>
+</body>
+</html>

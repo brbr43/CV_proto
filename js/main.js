@@ -294,63 +294,6 @@ function initLangBars() {
   document.querySelectorAll('.edu-card').forEach(card => observer.observe(card));
 }
 
-const CERTIFICATES = {
-  'amrha-team': {
-    image: 'assets/certificates/amrha-team.jpg',
-    title: 'Omraha Volunteer Team — فريق عمرها التطوعي',
-    description:
-      'Community volunteer team certificate recognizing humanitarian work during the 2023 earthquake in Syria. ' +
-      'Served as an effective team leader and remained on the ground for days assisting affected communities and supporting relief efforts.'
-  },
-  'ministry-of-culture': {
-    image: 'assets/certificates/ministry-of-culture.jpg',
-    title: 'Ministry of Culture — Syria Book Fair',
-    description:
-      'Certificate from the Ministry of Culture for participating in organizing Syria\'s largest book exhibition (معرض الكتاب). ' +
-      'Contributed to the planning and coordination of one of the country\'s most significant cultural events.'
-  }
-};
-
-function openCertModal(certId) {
-  const cert = CERTIFICATES[certId];
-  if (!cert) return;
-
-  const modal = document.getElementById('certModal');
-  document.getElementById('certModalImage').src = cert.image;
-  document.getElementById('certModalImage').alt = cert.title;
-  document.getElementById('certModalTitle').textContent = cert.title;
-  document.getElementById('certModalDesc').textContent = cert.description;
-
-  modal.classList.add('active');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeCertModal() {
-  const modal = document.getElementById('certModal');
-  modal.classList.remove('active');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-}
-
-function initCertificates() {
-  document.querySelectorAll('.cert-item[data-cert]').forEach(btn => {
-    btn.addEventListener('click', () => openCertModal(btn.dataset.cert));
-  });
-
-  const modal = document.getElementById('certModal');
-  if (!modal) return;
-
-  modal.querySelectorAll('[data-cert-close]').forEach(el => {
-    el.addEventListener('click', closeCertModal);
-  });
-
-  document.addEventListener('keydown', e => {
-    if (!modal.classList.contains('active')) return;
-    if (e.key === 'Escape') closeCertModal();
-  });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
   initModal();
@@ -359,5 +302,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initCursorGlow();
   initLangBars();
-  initCertificates();
 });
