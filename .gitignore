@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Original screenshot folders (organized copies are in assets/)
+Ayn_Alfahd/
+Kidzi/
+Your Coach/
+Elite/
+Fitnees Kitchen/
